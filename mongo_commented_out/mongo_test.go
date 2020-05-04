@@ -38,11 +38,6 @@ const (
 //	URI        string
 //}
 
-//type TestModel struct {
-//	State  string `bson:"state"`
-//	NewKey int    `bson:"new_key,omitempty"`
-//}
-
 type ungraceful struct{}
 
 func (t ungraceful) shutdown(ctx context.Context, ses int /*session *mgo.Session*/, closedChannel chan bool) {
@@ -225,7 +220,7 @@ func setupSession() (int /* *Mongo*/, error) {
 	//		return nil, errors.New("Failed to initialise mongo")
 	//	}
 	//
-	//	var err error
+	//	var err error // create this as a local varaible, so that the next line uses the 'global' variable 'session' ...
 	//
 	//	if session, err = mgo.Dial(URI); err != nil {
 	//		return nil, err

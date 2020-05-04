@@ -8,7 +8,7 @@ which came from:
 
 https://github.com/ONSdigital/go-ns/tree/feature/update-rchttp-dataset-api-client
 
-There are two folders with two different versions of the code.
+There are two folders with two different versions of the code. You can view the differences in the folder / file contents very nicely with `meld`.
 
 The names of the folders indicates which example requires mongo.
 
@@ -17,6 +17,9 @@ Tested with Go 1.14
 
 ## Overview
 The code demonstrates testing a `production` function called `shutdown()` and then 'replacing' it with a `mock'd` version to simulate some tests that can happen in production.
+
+The code has been adjusted from the original with numerous `Printf's` to clearly show which version of `shutdown()` is being used.
+
 
 ## Executing test
 In whichever version folder of the code you choose, open both files in VSCODE and in the `mongo_test.go` file scroll down to:
@@ -57,7 +60,7 @@ Exiting: slowQueryMongo
 PASS
 ```
 
-# Study the code to see how it get's the `mock` version of `shutdown()` to be used ...
+## Study the code to see how it get's the `mock` version of `shutdown()` to be used ...
 
 ### Licence
 
